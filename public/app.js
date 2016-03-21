@@ -9,4 +9,8 @@ app.config(function ($routeProvider){
             templateUrl: "src/table/table.html",
             controller: "tableCtrl"
         })
+        .when("/pagination", {
+            templateUrl: "src/pagination/pagination.html",
+            controller: "paginationCtrl"
+        })
 });

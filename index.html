@@ -2,34 +2,39 @@
 <header>
     <title>Angular JS Demo Application</title>
     <script src="../lib/angular/angular.min.js"></script>
-    <script src="../lib/angular/angular-route.min.js"></script>
+    <script src="../lib/angular/angular-route.min.js"></script>      
     <script src="../app.js"></script>
     <script src="../src/home/home-ctrl.js"></script>
     <script src="../src/table/table-ctrl.js"></script>
+    <script src="../src/pagination/pagination-ctrl.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</header>
 <body ng-app="AngularDemo">
-    <table>
-        <tr>
-            <td>
-                <h1>
-                    Angular JS Demo Application
-                </h1>
-            </td>
-        </tr>
-        <tr>
-            <td class="leftmenu">
-                <a href="#/home">Home</a><br></br>
-                <a href="#/UI">UI</a><br></br>
-                <a href="#/table">Table</a><br></br>
-                <a href="#/UI">Directive</a><br></br>
-                <a href="#/fileupload">File_Upload</a><br></br>
-                <a href="#/dashboard">Dashboard</a><br></br>
-                <a href="#/test">Test</a><br></br>
-            </td>
-            </td>
-            <td class="mainconent">
-                <div><ng-view></ng-view></div>
-            </td>
-        </tr>
-    </table>
+    <div class="main-content col-lg-9">
+        <table>
+            <tr>
+                <td>
+                    <h1>
+                        Angular JS Demo Application
+                    </h1>
+                </td>
+            </tr>
+            <tr>
+                <td class="leftmenu">
+                    <a href="#/home">Home</a><br></br>
+                    <a href="#/UI">UI</a><br></br>                    
+                    <a href="#/table">Table</a><br></br>
+                    <a href="#/UI">Directive</a><br></br>
+                    <a href="#/fileupload">File_Upload</a><br></br>
+                    <a href="#/dashboard">Dashboard</a><br></br>
+                    <a href="#/pagination">Pagination</a><br></br>
+                    <a href="#/test">Test</a><br></br>
+                </td>
+                <td class="mainconent">
+                    <div><ng-view></ng-view></div>
+                </td>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>

@@ -1,0 +1,51 @@
+<h1>Pagination Page</h1>
+<div ng-controller='paginationCtrl'>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12 col-md-12 col-lg-12">
+				<div class="col-md-12">
+					<div class="col-lg-6">
+						<div class="input-group">
+							<input type="text" class="form-control" id="fitersearch" placeholder="Search" ng-model="searchText">
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<nav>
+							<ul class="pager">
+								<li ng-class="{disabled:currentPage<=1}">
+									<a href="javascript:void(0)" ng-disabled="currentPage<=1" ng-click="currentPage<=1||changePage(currentPage-1)">Previous</a>
+								</li>
+								<li ng-repeat="page in pages" ng-class="{active:currentPage==page}"><a ng-click="changePage(page)" href="javascript:void(0)">{{page}}</a></li>
+								<li class="Next" ng-class="{disabled:currentPage>=pageCount}">
+									<a href="javascript:void(0)" ng-disabled="currentPage>=pageCount" ng-click="currentPage>=pageCount||changePage(currentPage+1)">Next</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<table class="table table-lg" id="roster_table">
+					<thead>
+						<tr>
+							<!-- <th></th> -->
+							<th>NAME</th>
+							<th>EMAIL</th>
+							<th>ROLE</th>
+							<th>CUSTOMER</th>
+							<th>PROJECT</th>
+						</tr>
+					</thead>          
+					<tbody>
+						<tr ng-repeat="orgnization in orgnizationList | filter:searchText">
+							<!-- <td><img src="img/no_photo.png"></td> -->
+							<td>{{orgnization.name}}</td>
+							<td>{{orgnization.email}}</td>
+							<td>{{orgnization.role}}</td>
+							<td>{{orgnization.customer}}</td>
+							<td>{{orgnization.project}}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
