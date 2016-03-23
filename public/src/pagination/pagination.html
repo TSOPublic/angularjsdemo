@@ -26,7 +26,7 @@
 				<table class="table table-lg" id="roster_table">
 					<thead>
 						<tr>
-							<!-- <th></th> -->
+							<th>#</th>
 							<th>NAME</th>
 							<th>EMAIL</th>
 							<th>ROLE</th>
@@ -37,6 +37,7 @@
 					<tbody>
 						<tr ng-repeat="orgnization in orgnizationList | filter:searchText">
 							<!-- <td><img src="img/no_photo.png"></td> -->
+							<td>{{$index+1}}</td>
 							<td>{{orgnization.name}}</td>
 							<td>{{orgnization.email}}</td>
 							<td>{{orgnization.role}}</td>
